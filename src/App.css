@@ -1,0 +1,62 @@
+.App {
+  text-align: center;
+  max-width: 22rem;
+  height:30rem;
+  margin:3rem auto;
+  border:1px solid rgb(42, 16, 55);
+  border-radius: 2rem;
+  background-color: rgb(247, 239, 237);
+
+}
+.App h2{
+  color:rgb(164, 3, 164);
+ font-style: italic;
+ font-weight: bolder;
+}
+.form input{
+border:1px solid purple;
+width:6rem;
+height:1rem;
+margin:1rem;
+padding:0.2rem;
+outline:none;
+}
+.form button{
+  border:none;
+  width:4rem;
+  height:1.5rem;
+  background-color: rgb(237, 206, 206);
+  border-radius: 1rem;
+  cursor: pointer;
+  outline:none;
+}
+.todo-list{
+  text-align: center;
+  padding:0.2rem;
+  margin:0.2rem;
+
+}
+.todo-list li{
+  list-style-type: none;
+  padding:0.2rem;
+  margin:0.2rem;
+}
+.complete{
+  text-decoration: line-through;
+}
+.delete{
+  background-color: red;
+  color:white;
+  float:right;
+  border-radius: 50%;
+  width:1rem;
+  cursor: pointer;
+  
+}
+.delete:hover{
+  width:1.5rem;
+}
+
+
+
+
