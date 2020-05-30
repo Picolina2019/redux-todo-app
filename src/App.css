@@ -56,7 +56,11 @@ outline:none;
 .delete:hover{
   width:1.5rem;
 }
-
+@media only screen and (max-width: 600px) {
+  .form button{
+    width:5rem;
+  }
+}
 
 
 
