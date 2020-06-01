@@ -7,7 +7,9 @@ import { Provider } from 'react-redux';
 import { reducer } from './redux';
 import { createStore, applyMiddleware } from 'redux';
 import Storage from "redux-state-save";
+
 const storage1 = new Storage();
+
 storage1.setConfig({
     storage_type: "local_storage",
     local_key:'redux'
