@@ -4,23 +4,18 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { Provider } from 'react-redux';
-import {reducer} from './redux';
-import {loadState, saveState} from './localStorage'
-import {createStore} from 'redux';
-import _ from 'lodash';
+import { reducer } from './redux';
+import { createStore, applyMiddleware } from 'redux';
+import Storage from "redux-state-save";
+const storage1 = new Storage();
+storage1.setConfig({
+    storage_type: "local_storage",
+    local_key:'redux'
+});
+let store = createStore(reducer, applyMiddleware(storage1.saveState()));
+ 
 
-const persistedState=loadState();
-const store= createStore(
-  reducer,
-  persistedState,
-  window.devToolsExtension && window.devToolsExtension()
-
-);
-store.subscribe(_.throttle(()=>{
-  saveState({
-    todos:store.getState().todos});
-},1000));
-
+store = storage1.loadState(store);
 
 
 ReactDOM.render(

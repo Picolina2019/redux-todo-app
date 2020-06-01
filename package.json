@@ -17,6 +17,7 @@
     "redux-devtools-extension": "^2.13.8",
     "redux-localstorage": "^1.0.0-rc5",
     "redux-localstorage-simple": "^2.2.0",
+    "redux-state-save": "^1.0.0",
     "uuid": "^8.1.0"
   },
   "scripts": {
